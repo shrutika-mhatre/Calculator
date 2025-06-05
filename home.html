@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Calculator</h1>
+    <form>
+      <input type="text" id="result" readonly />
+
+      <table>
+        <!-- Scientific functions -->
+        <tr>
+          <td><input type="button" value="sin" onclick="scientific('sin')" /></td>
+          <td><input type="button" value="cos" onclick="scientific('cos')" /></td>
+          <td><input type="button" value="tan" onclick="scientific('tan')" /></td>
+          <td><input type="button" value="log" onclick="scientific('log')" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="√" onclick="scientific('sqrt')" /></td>
+          <td><input type="button" value="^" onclick="Solve('**')" /></td>
+          <td><input type="button" value="π" onclick="scientific('pi')" /></td>
+          <td><input type="button" value="e" onclick="scientific('e')" /></td>
+        </tr>
+
+        <!-- Calculator Controls -->
+        <tr>
+          <td><input type="button" value="C" onclick="Clear()" /></td>
+          <td><input type="button" value="%" onclick="per()" /></td>
+          <td><input type="button" value="Del" onclick="Back()" /></td>
+          <td><input type="button" value="/" onclick="Solve('/')" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="(" onclick="Solve('(')" /></td>
+          <td><input type="button" value=")" onclick="Solve(')')" /></td>
+          <td><input type="button" value="00" onclick="Solve('00')" /></td>
+          <td><input type="button" value="×" onclick="Solve('*')" /></td>
+        </tr>
+
+        <!-- Number pad -->
+        <tr>
+          <td><input type="button" value="7" onclick="Solve('7')" /></td>
+          <td><input type="button" value="8" onclick="Solve('8')" /></td>
+          <td><input type="button" value="9" onclick="Solve('9')" /></td>
+          <td><input type="button" value="−" onclick="Solve('-')" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="4" onclick="Solve('4')" /></td>
+          <td><input type="button" value="5" onclick="Solve('5')" /></td>
+          <td><input type="button" value="6" onclick="Solve('6')" /></td>
+          <td><input type="button" value="+" onclick="Solve('+')" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="1" onclick="Solve('1')" /></td>
+          <td><input type="button" value="2" onclick="Solve('2')" /></td>
+          <td><input type="button" value="3" onclick="Solve('3')" /></td>
+          <td><input type="button" value="." onclick="Solve('.')" /></td>
+        </tr>
+        <tr>
+          <td colspan="3"><input type="button" value="0" onclick="Solve('0')" style="width: 100%;" /></td>
+          <td><input type="button" value="=" onclick="Res()" /></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
+  <script src="calculate.js"></script>
+</body>
+</html>
